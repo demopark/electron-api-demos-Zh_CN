@@ -1,0 +1,121 @@
+<template class="task-template">
+  <section id="app-sys-information-section" class="section js-section u-category-system">
+    <header class="section-header">
+      <div class="section-wrapper">
+        <h1>
+          <svg class="section-icon"><use xlink:href="assets/img/icons.svg#icon-system"></use></svg>
+          Get app and system information
+        </h1>
+        <h3>With a few Node.js and Electron modules you can gather information about the user's system, app or screen.</h3>
+        <p>Links to the relevant documentation are in the demos below.</p>
+      </div>
+    </header>
+
+    <div class="demo">
+      <div class="demo-wrapper">
+        <button id="app-info-demo-toggle" class="js-container-target demo-toggle-button">Get app information
+          <div class="demo-meta u-avoid-clicks">Supports: Win, macOS, Linux <span class="demo-meta-divider">|</span> Process: Both</div>
+        </button>
+        <div class="demo-box">
+          <div class="demo-controls">
+            <button class="demo-button" id="app-info">View Demo</button>
+            <span class="demo-response" id="got-app-info"></span>
+          </div>
+          <p>The main process <code>app</code> module can be used to get the path at which your app is located on the user's computer.</p>
+          <p>In this example, to get that information from the renderer process, we use the <code>ipc</code> module to send a message to the main process requesting the app's path.</p>
+          <p>See the <a href="http://electron.atom.io/docs/api/app">app module documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> for more.</p>
+          <h5>Renderer Process</h5>
+          <pre><code data-path="renderer-process/system/app-information.js"></pre></code>
+          <h5>Main Process</h5>
+          <pre><code data-path="main-process/system/app-information.js"></pre></code>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-wrapper">
+        <button id="app-info-demo-toggle" class="js-container-target demo-toggle-button">Get version information
+          <div class="demo-meta u-avoid-clicks">Supports: Win, macOS, Linux <span class="demo-meta-divider">|</span> Process: Both</div>
+        </button>
+        <div class="demo-box">
+          <div class="demo-controls">
+            <button class="demo-button" id="version-info">View Demo</button>
+            <span class="demo-response" id="got-version-info"></span>
+          </div>
+          <p>The <code>process</code> module is built into Node.js (therefore you can use this in both the main and renderer processes) and in Electron apps this object has a few more useful properties on it.</p>
+          <p>The example below gets the version of Electron in use by the app.</p>
+          <p>See the <a href="http://electron.atom.io/docs/api/process">process documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> for more.</p>
+          <h5>Renderer Process</h5>
+          <pre><code data-path="renderer-process/system/version-information.js"></pre></code>
+
+          <div class="demo-protip">
+            <h2>ProTip</h2>
+            <strong>Find versions of Chromium, Node.js and V8.</strong>
+            <p>Electron also includes verions of Chromium, Node.js and V8 within the <code>process.versions</code> object. You can get there quickly by opening up developer tools in an Electron app and typing <code>process.versions</code>.</p>
+            <pre><code class="language-js">// Returns version of Chromium in use
+process.versions.chrome
+// Returns version of V8 in use
+process.versions.v8
+// Returns version of Node in use
+process.versions.node</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-wrapper">
+        <button id="sys-info-demo-toggle" class="js-container-target demo-toggle-button">Get system information
+          <div class="demo-meta u-avoid-clicks">Supports: Win, macOS, Linux <span class="demo-meta-divider">|</span> Process: Both</div>
+        </button>
+        <div class="demo-box">
+          <div class="demo-controls">
+            <button class="demo-button" id="sys-info">View Demo</button>
+            <span class="demo-response" id="got-sys-info"></span>
+          </div>
+          <p>The Node.js <code>os</code> module provides useful information about the user's operating system. It's built into Node.js and can be used in both the main and renderer proesses.</p>
+          <p>In the example below we require the module and then return the location of the home directory.</p>
+
+          <p>See the full <a href="https://nodejs.org/api/os.html"> os documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> for more.</p>
+          <h5>Renderer Process</h5>
+          <pre><code data-path="renderer-process/system/sys-information.js"></pre></code>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-wrapper">
+        <button id="screen-info-demo-toggle" class="js-container-target demo-toggle-button">Get screen information
+          <div class="demo-meta u-avoid-clicks">Supports: Win, macOS, Linux <span class="demo-meta-divider">|</span> Process: Both</div>
+        </button>
+        <div class="demo-box">
+          <div class="demo-controls">
+            <button class="demo-button" id="screen-info">View Demo</button>
+            <span class="demo-response" id="got-screen-info"></span>
+          </div>
+          <p>The Electron <code>screen</code> module retrieves information about screen size, displays, cursor position, etc. In the example below we retrieve the dimensions of the monitor in use.</p>
+
+          <p>See the full <a href="http://electron.atom.io/docs/api/screen">screen documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> for more.</p>
+          <h5>Renderer Process</h5>
+          <pre><code data-path="renderer-process/system/screen-information.js"></pre></code>
+
+          <div class="demo-protip">
+            <h2>ProTip</h2>
+            <strong>Differences in dimensions.</strong>
+            <p>The <code>.size</code> method in the example returns the raw dimensions of the screen but because of system menu bars this may not be the actual space available for your app.</p>
+
+            <p>To get the dimensions of the available screen space use the <code>.workAreaSize</code> method. Using <code>.workArea</code> will return the coordinates as well as the dimensions of the available screen space.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      require('./renderer-process/system/app-information')
+      require('./renderer-process/system/version-information')
+      require('./renderer-process/system/sys-information')
+      require('./renderer-process/system/screen-information')
+    </script>
+
+  </section>
+</template>

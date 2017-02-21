@@ -1,0 +1,57 @@
+<template class="task-template">
+  <section id="clipboard-section" class="section js-section u-category-system">
+    <header class="section-header">
+      <div class="section-wrapper">
+        <h1>
+          <svg class="section-icon"><use xlink:href="assets/img/icons.svg#icon-system"></use></svg>
+          Clipboard
+        </h1>
+        <h3>The <code>clipboard</code> module provides methods to perform copy and paste operations.</h3>
+        <p>This module also has methods for copying text as markup (HTML) to the clipboard.</p>
+
+        <p>Open the <a href="http://electron.atom.io/docs/api/clipboard">full API documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> in your browser.</p>
+      </div>
+    </header>
+
+    <div class="demo">
+      <div class="demo-wrapper">
+        <button id="copy-to-demo-toggle" class="js-container-target demo-toggle-button">Copy
+          <div class="demo-meta u-avoid-clicks">Supports: Win, macOS, Linux <span class="demo-meta-divider">|</span> Process: Both</div>
+        </button>
+        <div class="demo-box">
+          <div class="demo-controls">
+            <button class="demo-button" id="copy-to">Copy</button>
+            <input class="demo-input" id="copy-to-input" aria-label="Click copy" placeholder="Click copy."></input>
+          </div>
+          <p>In this example we copy a phrase to the clipboard. After clicking 'Copy' use the text area to paste (CMD + V or CTRL + V) the phrase from the clipboard.</p>
+          <h5>Renderer Process</h5>
+          <pre><code data-path="renderer-process/system/copy.js"></pre></code>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-wrapper">
+        <button id="paste-to-demo-toggle" class="js-container-target demo-toggle-button">Paste
+          <div class="demo-meta u-avoid-clicks">Supports: Win, macOS, Linux <span class="demo-meta-divider">|</span> Process: Both</div>
+        </button>
+        <div class="demo-box">
+          <div class="demo-controls">
+            <button class="demo-button" id="paste-to">Paste</button>
+            <span class="demo-response" id="paste-from"></span>
+          </div>
+          <p>In this example we copy a string to the clipboard and then paste the results into a message above.</p>
+
+          <h5>Renderer Process</h5>
+          <pre><code data-path="renderer-process/system/paste.js"></pre></code>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      require('./renderer-process/system/copy')
+      require('./renderer-process/system/paste')
+    </script>
+
+  </section>
+</template>

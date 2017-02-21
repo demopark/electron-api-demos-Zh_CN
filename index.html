@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/nativize.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/about.css">
+  <link rel="stylesheet" href="assets/css/nav.css">
+  <link rel="stylesheet" href="assets/css/section.css">
+  <link rel="stylesheet" href="assets/css/demo.css">
+  <link rel="stylesheet" href="assets/css/github.css">
+
+  <link rel="import" href="sections/about.html">
+  <link rel="import" href="sections/windows/windows.html">
+  <link rel="import" href="sections/windows/crash-hang.html">
+  <link rel="import" href="sections/menus/menus.html">
+  <link rel="import" href="sections/menus/shortcuts.html">
+  <link rel="import" href="sections/native-ui/ex-links-file-manager.html">
+  <link rel="import" href="sections/native-ui/dialogs.html">
+  <link rel="import" href="sections/native-ui/tray.html">
+  <link rel="import" href="sections/communication/ipc.html">
+  <link rel="import" href="sections/system/app-sys-information.html">
+  <link rel="import" href="sections/system/clipboard.html">
+  <link rel="import" href="sections/system/protocol-handler.html">
+  <link rel="import" href="sections/media/pdf.html">
+  <link rel="import" href="sections/media/desktop-capturer.html">
+</head>
+<body>
+
+  <nav class="nav js-nav">
+    <header class="nav-header">
+      <h1 class="nav-title">Electron <strong>API Demos</strong></h1>
+      <svg class="nav-header-icon"><use xlink:href="assets/img/icons.svg#icon-electron"></use></svg>
+    </header>
+
+    <div class="nav-item u-category-windows">
+      <h5 class="nav-category">
+        <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-windows"></use></svg>
+        Windows
+      </h5>
+      <button type="button" id="button-windows" data-section="windows" class="nav-button">Create and manage <em>windows</em></button>
+      <button type="button" id="button-crash-hang" data-section="crash-hang" class="nav-button">Handling window <em>crashes and hangs</em></button>
+    </div>
+
+    <div class="nav-item u-category-menu">
+      <h5 class="nav-category">
+        <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-menu"></use></svg>
+        Menus
+      </h5>
+      <button type="button" id="button-menus" data-section="menus" class="nav-button">Customize <em>menus</em> </button>
+      <button type="button" id="button-shortcuts" data-section="shortcuts" class="nav-button">Register keyboard <em>shortcuts</em></button>
+    </div>
+
+    <div class="nav-item u-category-native-ui">
+      <h5 class="nav-category">
+        <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-native-ui"></use></svg>
+        Native User Interface</h5>
+      <button type="button" id="button-ex-links-file-manager" data-section="ex-links-file-manager" class="nav-button">Open <em>external links</em> or system <em>file manager</em></button>
+      <button type="button" id="button-dialogs" data-section="dialogs" class="nav-button">Use system <em>dialogs</em></button>
+      <button type="button" id="button-tray" data-section="tray" class="nav-button">Put your app in the <em>tray</em></button>
+    </div>
+
+    <div class="nav-item u-category-communication">
+      <h5 class="nav-category">
+        <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-communication"></use></svg>
+        Communication
+      </h5>
+      <button type="button" id="button-ipc" data-section="ipc" class="nav-button">Communicate between the <em>two processes</em></button>
+    </div>
+
+    <div class="nav-item u-category-system">
+      <h5 class="nav-category">
+        <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-system"></use></svg>
+        System
+      </h5>
+      <button type="button" id="button-app-sys-information" data-section="app-sys-information" class="nav-button" >Get app or user <em>system information</em></button>
+      <button type="button" id="button-clipboard" data-section="clipboard" class="nav-button">Copy and paste from the <em>clipboard</em></button>
+      <button type="button" id="button-protocol" data-section="protocol" class="nav-button">Launch app from <em>protocol handler</em></button>
+    </div>
+
+    <div class="nav-item u-category-media">
+      <h5 class="nav-category">
+        <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-media"></use></svg>
+        Media
+      </h5>
+      <button type="button" id="button-pdf" data-section="pdf" class="nav-button"><em>Print</em> to PDF</button>
+      <button type="button" id="button-desktop-capturer" data-section="desktop-capturer" class="nav-button">Take a <em>screenshot</em></button>
+    </div>
+
+    <footer class="nav-footer">
+      <button type="button" id="button-about" data-modal="about" class="nav-footer-button">About</button>
+      <a class="nav-footer-logo" href="https://github.com" aria-label="Homepage">
+        <svg class="nav-footer-icon"><use xlink:href="assets/img/icons.svg#icon-love"></use></svg>
+      </a>
+    </footer>
+  </nav>
+
+  <main class="content js-content"></main>
+
+  <script>
+    require('./assets/imports')
+    require('./assets/ex-links')
+    require('./assets/nav')
+    require('./assets/demo-btns')
+    require('./assets/code-blocks')
+    require('./assets/normalize-shortcuts')
+  </script>
+</body>
+</html>
