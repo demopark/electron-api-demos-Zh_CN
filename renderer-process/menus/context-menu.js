@@ -1,6 +1,6 @@
 const ipc = require('electron').ipcRenderer
 
-// Tell main process to show the menu when demo button is clicked
+// 告诉主进程在单击示例按钮时显示菜单
 const contextMenuBtn = document.getElementById('context-menu')
 contextMenuBtn.addEventListener('click', function () {
   ipc.send('show-context-menu')

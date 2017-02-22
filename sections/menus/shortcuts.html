@@ -4,25 +4,23 @@
       <div class="section-wrapper">
         <h1>
           <svg class="section-icon"><use xlink:href="assets/img/icons.svg#icon-menu"></use></svg>
-          Keyboard Shortcuts
+          键盘快捷键
         </h1>
 
-        <h3>The <code>globalShortcut</code> and <code>Menu</code> modules can be used to define keyboard shortcuts.</h3>
+        <h3>可以使用 <code>globalShortcut</code> 和 <code>Menu</code> 模块定义键盘快捷键.</h3>
 
         <p>
-          In Electron, keyboard shortcuts are called accelerators.
-          They can be assigned to actions in your application's Menu,
-          or they can be assigned globally so they'll be triggered even when
-          your app doesn't have keyboard focus.
+          在 Electron 中, 键盘快捷键被称作加速器(Accelerator). 它们可以分配到应用程序菜单中的操作上,
+          也可以全局分配，所以即使你的应用程序没有获得键盘焦点, 它们也可以被触发.
         </p>
 
         <p>
-          Open the full documentation for the
+          在浏览器中查看
           <a class="u-exlink" href="http://electron.atom.io/docs/api/menu">Menu</a>,
           <a class="u-exlink" href="http://electron.atom.io/docs/api/accelerator">Accelerator</a>,
-          and
+          和
           <a class="u-exlink" href="http://electron.atom.io/docs/api/global-shortcut">globalShortcut</a>
-          APIs in your browser.
+          API 的完整文档.
         </p>
 
       </div>
@@ -30,31 +28,27 @@
 
     <div class="demo">
       <div class="demo-wrapper">
-        <button id="shortcuts-demo-toggle" class="js-container-target demo-toggle-button">Register a global keyboard shortcut
-          <div class="demo-meta u-avoid-clicks">Supports: Win, macOS, Linux <span class="demo-meta-divider">|</span> Process: Main</div>
+        <button id="shortcuts-demo-toggle" class="js-container-target demo-toggle-button">注册全局键盘快捷键
+          <div class="demo-meta u-avoid-clicks">支持: Win, macOS, Linux <span class="demo-meta-divider">|</span> 进程: Main</div>
         </button>
         <div class="demo-box">
           <p>
-            To try this demo, press <kbd class="normalize-to-platform">CommandOrControl+Alt+K</kbd> on your keyboard.
+            试一下这个示例, 在键盘上按下 <kbd class="normalize-to-platform">CommandOrControl+Alt+K</kbd> 快捷键.
           </p>
 
           <p>
-            Global shortcuts are detected even when the app doesn't have
-            keyboard focus, and they must be registered after the app's
-            `ready` event is emitted.
+            即使应用程序没有键盘焦点, 也会检测到全局快捷键, 而且它们必须在应用程序的 `ready` 事件发出后注册.
           </p>
 
-          <h5>Main Process</h5>
-          <pre><code data-path="main-process/menus/shortcuts.js"></pre></code>
+          <h5>主进程</h5>
+          <pre><code data-path="main-process/menus/shortcuts.js"></code></pre>
 
           <div class="demo-protip">
-            <h2>ProTip</h2>
-            <strong>Avoid overriding system-wide keyboard shortcuts.</strong>
+            <h2>高级技巧</h2>
+            <strong>避免覆盖系统范围的键盘快捷键.</strong>
             <p>
-              When registering global shortcuts, it's important to be aware of
-              existing defaults in the target operating system, so as not to
-              override any existing behaviors. For an overview of each
-              operating system's keyboard shortcuts, view these documents:
+                注册全局快捷方式时, 请务必注意目标操作系统中的现有默认值, 以免覆盖任何现有行为.
+                有关每个操作系统键盘快捷键的概述, 请查看这些文档:
             </p>
 
             <ul>
