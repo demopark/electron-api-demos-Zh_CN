@@ -6,6 +6,13 @@
 * 翻译 `index.html` 文件, 侧边栏翻译
 * 翻译 `sections\windows\windows.html` 文件
 * 翻译 `sections\windows\crash-hang.html` 文件
+* 翻译 `sections\windows\manage-modal.html` 文件
+* 翻译 `sections\windows\modal-toggle-visibility.html` 文件
+* 翻译 `sections\windows\modal.html` 文件
+* 翻译 `sections\windows\process-crash.html` 文件
+* 翻译 `sections\windows\process-hang.html` 文件
+* 翻译 `renderer-process\windows\manage-window.js` 输出信息
+
 
 ## 2017-02-21
 
