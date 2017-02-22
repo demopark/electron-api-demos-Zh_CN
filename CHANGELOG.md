@@ -1,5 +1,12 @@
 # 更新记录
 
+## 2017-02-22
+
+### 更新
+* 翻译 `index.html` 文件, 侧边栏翻译
+* 翻译 `sections\windows\windows.html` 文件
+* 翻译 `sections\windows\crash-hang.html` 文件
+
 ## 2017-02-21
 
 ### 新增
