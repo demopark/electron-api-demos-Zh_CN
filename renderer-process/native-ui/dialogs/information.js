@@ -7,8 +7,8 @@ informationBtn.addEventListener('click', function (event) {
 })
 
 ipc.on('information-dialog-selection', function (event, index) {
-  let message = 'You selected '
-  if (index === 0) message += 'yes.'
-  else message += 'no.'
+  let message = '你选择了 '
+  if (index === 0) message += '是.'
+  else message += '否.'
   document.getElementById('info-selection').innerHTML = message
 })

@@ -4,60 +4,62 @@
       <div class="section-wrapper">
         <h1>
           <svg class="section-icon"><use xlink:href="assets/img/icons.svg#icon-native-ui"></use></svg>
-          Open external links and the file manager
+          打开外部链接或文件管理器
         </h1>
-        <h3>The <code>shell</code> module in Electron allows you to access certain native elements like the file manager and default web browser.</h3>
+        <h3>Electron 中的 <code>shell</code> 模块允许您访问某些本地元素, 如文件管理器和默认 Web 浏览器.</h3>
 
-        <p>This module works in both the main and renderer process.</p>
-        <p>Open the <a href="http://electron.atom.io/docs/api/shell">full API documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> in your browser.</p>
+        <p>此模块在主进程和渲染器进程中都可以工作.</p>
+        <p>在浏览器中查看 <a href="http://electron.atom.io/docs/api/shell">完整 API 文档<span class="u-visible-to-screen-reader">(在新窗口中打开)</span></a>.</p>
       </div>
     </header>
 
     <div class="demo">
       <div class="demo-wrapper">
-        <button id="open-file-manager-demo-toggle" class="js-container-target demo-toggle-button">Open Path in File Manager
-          <div class="demo-meta u-avoid-clicks">Supports: Win, macOS, Linux <span class="demo-meta-divider">|</span> Process: Both</div>
+        <button id="open-file-manager-demo-toggle" class="js-container-target demo-toggle-button">在文件管理器中打开路径
+          <div class="demo-meta u-avoid-clicks">支持: Win, macOS, Linux <span class="demo-meta-divider">|</span> 进程: Both</div>
         </button>
         <div class="demo-box">
           <div class="demo-controls">
-            <button class="demo-button" id="open-file-manager">View Demo</button>
+            <button class="demo-button" id="open-file-manager">查看示例</button>
           </div>
-          <p>This demonstrates using the <code>shell</code> module to open the system file manager at a particular location.</p>
-          <p>Clicking the demo button will open your file manager at the root.</p>
-          <h5>Renderer Process</h5>
-          <pre><code data-path="renderer-process/native-ui/ex-links-file-manager/file-manager.js"></pre></code>
+          <p>当前示例使用 <code>shell</code> 模块在特定位置打开系统文件管理器.</p>
+          <p>单击示例按钮将在根目录中打开文件管理器.</p>
+          <h5>渲染器进程</h5>
+          <pre><code data-path="renderer-process/native-ui/ex-links-file-manager/file-manager.js"></code></pre>
         </div>
       </div>
     </div>
 
     <div class="demo">
       <div class="demo-wrapper">
-        <button id="open-ex-links-demo-toggle" class="js-container-target demo-toggle-button">Open External Links
-          <div class="demo-meta u-avoid-clicks">Supports: Win, macOS, Linux <span class="demo-meta-divider">|</span> Process: Both</div>
+        <button id="open-ex-links-demo-toggle" class="js-container-target demo-toggle-button">打开外部链接
+          <div class="demo-meta u-avoid-clicks">支持: Win, macOS, Linux <span class="demo-meta-divider">|</span> 进程: Both</div>
         </button>
         <div class="demo-box">
           <div class="demo-controls">
-            <button class="demo-button" id="open-ex-links">View Demo</button>
+            <button class="demo-button" id="open-ex-links">查看示例</button>
           </div>
-          <p>If you do not want your app to open website links <em>within</em> the app, you can use the <code>shell</code> module to open them externally. When clicked, the links will open outside of your app and in the user's default web browser.</p>
-          <p>When the demo button is clicked, the electron website will open in your browser.<p>
-          <h5>Renderer Process</h5>
-          <pre><code data-path="renderer-process/native-ui/ex-links-file-manager/ex-links.js"></pre></code>
+          <p>如果您不希望在当前应用程序中打开网站链接, 可以使用 <code>shell</code> 模块在外部打开. 当点击链接之后将在用户的默认浏览器中打开.</p>
+          <p>当点击示例按钮时, 将在您的浏览器中打开 Electron 的网站.<p>
+          <h5>渲染器进程</h5>
+          <pre><code data-path="renderer-process/native-ui/ex-links-file-manager/ex-links.js"></code></pre>
 
           <div class="demo-protip">
-            <h2>ProTip</h2>
-            <strong>Open all outbound links externally.</strong>
-            <p>You may want to open all <code>http</code> and <code>https</code> links outside of your app. To do this, query the document and loop through each link and add a listener. This app uses the code below which is located in <code>assets/ex-links.js</code>.</h5>
-            <h5>Renderer Process</h5>
-            <pre><code data-path="assets/ex-links.js"></pre></code>
+            <h2>高级技巧</h2>
+            <strong>在外部打开所有出站链接.</strong>
+            <p>您可能需要打开应用外部的所有 <code>http</code> 和 <code>https</code> 链接.
+              为此, 查询文档并循环遍历每个链接并添加一个监听器.
+              此应用程序使用位于 <code>assets/ex-links.js</code> 下面的代码.</p>
+            <h5>渲染器进程</h5>
+            <pre><code data-path="assets/ex-links.js"></code></pre>
           </div>
         </div>
       </div>
     </div>
 
     <script type="text/javascript">
-      require('./renderer-process/native-ui/ex-links-file-manager/file-manager')
-      require('./renderer-process/native-ui/ex-links-file-manager/ex-links')
+      require('./renderer-process/native-ui/ex-links-file-manager/file-manager');
+      require('./renderer-process/native-ui/ex-links-file-manager/ex-links');
     </script>
 
   </section>
