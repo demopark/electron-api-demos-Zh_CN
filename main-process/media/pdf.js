@@ -9,7 +9,7 @@ const shell = electron.shell
 ipc.on('print-to-pdf', function (event) {
   const pdfPath = path.join(os.tmpdir(), 'print.pdf')
   const win = BrowserWindow.fromWebContents(event.sender)
-  // Use default printing options
+  // 使用默认打印选项
   win.webContents.printToPDF({}, function (error, data) {
     if (error) throw error
     fs.writeFile(pdfPath, data, function (error) {

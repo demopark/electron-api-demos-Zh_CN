@@ -4,46 +4,46 @@
       <div class="section-wrapper">
         <h1>
           <svg class="section-icon"><use xlink:href="assets/img/icons.svg#icon-system"></use></svg>
-          Clipboard
+          剪贴板
         </h1>
-        <h3>The <code>clipboard</code> module provides methods to perform copy and paste operations.</h3>
-        <p>This module also has methods for copying text as markup (HTML) to the clipboard.</p>
+        <h3><code>clipboard</code> 模块提供了执行复制和粘贴操作的方法.</h3>
+        <p>此模块还具有将文本作为标记（HTML）复制到剪贴板的方法.</p>
 
-        <p>Open the <a href="http://electron.atom.io/docs/api/clipboard">full API documentation<span class="u-visible-to-screen-reader">(opens in new window)</span></a> in your browser.</p>
+        <p>在浏览器中查看 <a href="http://electron.atom.io/docs/api/clipboard">完整 API 文档<span class="u-visible-to-screen-reader">(在新窗口中打开)</span></a>.</p>
       </div>
     </header>
 
     <div class="demo">
       <div class="demo-wrapper">
-        <button id="copy-to-demo-toggle" class="js-container-target demo-toggle-button">Copy
-          <div class="demo-meta u-avoid-clicks">Supports: Win, macOS, Linux <span class="demo-meta-divider">|</span> Process: Both</div>
+        <button id="copy-to-demo-toggle" class="js-container-target demo-toggle-button">复制
+          <div class="demo-meta u-avoid-clicks">支持: Win, macOS, Linux <span class="demo-meta-divider">|</span> 进程: Both</div>
         </button>
         <div class="demo-box">
           <div class="demo-controls">
-            <button class="demo-button" id="copy-to">Copy</button>
-            <input class="demo-input" id="copy-to-input" aria-label="Click copy" placeholder="Click copy."></input>
+            <button class="demo-button" id="copy-to">复制</button>
+            <input class="demo-input" id="copy-to-input" aria-label="Click copy" placeholder="点击复制按钮."/>
           </div>
-          <p>In this example we copy a phrase to the clipboard. After clicking 'Copy' use the text area to paste (CMD + V or CTRL + V) the phrase from the clipboard.</p>
-          <h5>Renderer Process</h5>
-          <pre><code data-path="renderer-process/system/copy.js"></pre></code>
+          <p>在这个示例中, 我们将一个短语复制到剪贴板. 单击 "复制" 按钮后, 使用粘贴（CMD + V 或 CTRL + V）将短语粘贴到文本区域.</p>
+          <h5>渲染器进程</h5>
+          <pre><code data-path="renderer-process/system/copy.js"></code></pre>
         </div>
       </div>
     </div>
 
     <div class="demo">
       <div class="demo-wrapper">
-        <button id="paste-to-demo-toggle" class="js-container-target demo-toggle-button">Paste
-          <div class="demo-meta u-avoid-clicks">Supports: Win, macOS, Linux <span class="demo-meta-divider">|</span> Process: Both</div>
+        <button id="paste-to-demo-toggle" class="js-container-target demo-toggle-button">粘贴
+          <div class="demo-meta u-avoid-clicks">支持: Win, macOS, Linux <span class="demo-meta-divider">|</span> 进程: Both</div>
         </button>
         <div class="demo-box">
           <div class="demo-controls">
-            <button class="demo-button" id="paste-to">Paste</button>
+            <button class="demo-button" id="paste-to">粘贴</button>
             <span class="demo-response" id="paste-from"></span>
           </div>
-          <p>In this example we copy a string to the clipboard and then paste the results into a message above.</p>
+          <p>在本示例中, 我们将一个字符串复制到剪贴板, 然后将结果粘贴到上面的消息中.</p>
 
-          <h5>Renderer Process</h5>
-          <pre><code data-path="renderer-process/system/paste.js"></pre></code>
+          <h5>渲染器进程</h5>
+          <pre><code data-path="renderer-process/system/paste.js"></code></pre>
         </div>
       </div>
     </div>
