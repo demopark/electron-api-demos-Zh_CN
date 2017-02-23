@@ -11,7 +11,7 @@
 
 通过这个应用程序, 你可以了解用 Electron 能够做什么并使用源代码来学习如何创建一个基本的 Electron 应用程序.
 
-![Electron API Demos Screenshots](https://cloud.githubusercontent.com/assets/378023/15016148/ae06cc80-124a-11e6-80dd-076d83e492f6.png)
+![Electron API 示例](assets/img/intro.png)
 
 ---
 
