@@ -12,9 +12,9 @@ processCrashBtn.addEventListener('click', function (event) {
   win.webContents.on('crashed', function () {
     const options = {
       type: 'info',
-      title: 'Renderer Process Crashed',
-      message: 'This process has crashed.',
-      buttons: ['Reload', 'Close']
+      title: '渲染器进程崩溃',
+      message: '这个进程已经崩溃.',
+      buttons: ['重载', '关闭']
     }
     dialog.showMessageBox(options, function (index) {
       if (index === 0) win.reload()
