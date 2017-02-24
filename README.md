@@ -30,13 +30,13 @@
 在构建此应用之前, 你需要安装 [Node.js](https://nodejs.org).
 
 ```bash
-$ git clone https://github.com/electron/electron-api-demos
-$ cd electron-api-demos
+$ git clone https://github.com/demopark/electron-api-demos-Zh_CN
+$ cd electron-api-demos-Zh_CN
 $ npm install
 $ npm start
 ```
 
-如果你不想通过克隆的方式, 你可以 [下载源码](https://github.com/electron/electron-api-demos/archive/master.zip).
+如果你不想通过克隆的方式, 你可以 [下载源码](https://github.com/demopark/electron-api-demos-Zh_CN/archive/master.zip).
 
 为了便于开发, 你可以打开 DevTools 以全屏的方式运行程序:
 
