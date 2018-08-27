@@ -21,6 +21,7 @@
   <link rel="import" href="sections/native-ui/notifications.html">
   <link rel="import" href="sections/native-ui/dialogs.html">
   <link rel="import" href="sections/native-ui/tray.html">
+  <link rel="import" href="sections/native-ui/drag.html">
   <link rel="import" href="sections/communication/ipc.html">
   <link rel="import" href="sections/system/app-sys-information.html">
   <link rel="import" href="sections/system/clipboard.html">
@@ -62,14 +63,15 @@
       <button type="button" id="button-notifications" data-section="notifications" class="nav-button">使用基本或附带图像的 <em>通知</em></button>
       <button type="button" id="button-dialogs" data-section="dialogs" class="nav-button">使用系统 <em>对话框</em></button>
       <button type="button" id="button-tray" data-section="tray" class="nav-button">将应用程序放入 <em>托盘</em></button>
+      <button type="button" id="button-drag" data-section="drag" class="nav-button"><em>拖放</em> 文件</button>
     </div>
 
     <div class="nav-item u-category-communication">
       <h5 class="nav-category">
         <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-communication"></use></svg>
-        通讯
+        通信
       </h5>
-      <button type="button" id="button-ipc" data-section="ipc" class="nav-button">在 <em>两个进程</em> 之间进行通讯</button>
+      <button type="button" id="button-ipc" data-section="ipc" class="nav-button">在 <em>两个进程</em> 之间进行通信</button>
     </div>
 
     <div class="nav-item u-category-system">
@@ -77,9 +79,9 @@
         <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-system"></use></svg>
         系统
       </h5>
-      <button type="button" id="button-app-sys-information" data-section="app-sys-information" class="nav-button" >获取应用和用户 <em>系统信息</em></button>
+      <button type="button" id="button-app-sys-information" data-section="app-sys-information" class="nav-button" >获取应用或用户 <em>系统信息</em></button>
       <button type="button" id="button-clipboard" data-section="clipboard" class="nav-button">从 <em>剪贴板</em> 复制和粘贴</button>
-      <button type="button" id="button-protocol" data-section="protocol" class="nav-button">从 <em>协议处理器</em> 启动应用程序</button>
+      <button type="button" id="button-protocol" data-section="protocol" class="nav-button">使用 <em>协议处理器</em> 启动应用程序</button>
     </div>
 
     <div class="nav-item u-category-media">

@@ -7,10 +7,10 @@ const notification = {
 }
 const notificationButton = document.getElementById('advanced-noti')
 
-notificationButton.addEventListener('click', function () {
+notificationButton.addEventListener('click', () => {
   const myNotification = new window.Notification(notification.title, notification)
 
   myNotification.onclick = () => {
-    console.log('Notification clicked')
+    console.log('通知被点击')
   }
 })

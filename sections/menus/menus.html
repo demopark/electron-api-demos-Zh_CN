@@ -10,7 +10,7 @@
 
         <p>有两种菜单: 应用程序（顶部）菜单和上下文（右键单击）菜单.</p>
 
-        <p>在浏览器中打开 <a href="https://github.com/electron/electron/blob/master/docs-translations/zh-CN/api/menu.md">完整的 API 文档<span class="u-visible-to-screen-reader">(在新窗口中打开)</span></a>.</p>
+        <p>在浏览器中打开 <a href="http://electron.atom.io/docs/api/menu">完整的 API 文档<span class="u-visible-to-screen-reader">(在新窗口中打开)</span></a>.</p>
       </div>
     </header>
 
@@ -22,7 +22,6 @@
         <div class="demo-box">
           <p>使用 <code>Menu</code> 和 <code>MenuItem</code> 模块可以自定义你的应用程序菜单. 如果没有设置任何菜单, Electron 将为您的应用默认生成一个最小的菜单.</p>
 
-
           <p>此应用程序使用下面的代码设置应用程序菜单. 如果您点击应用程序菜单中的 "查看" 选项, 然后点击 "应用程序菜单演示", 则会显示一个信息框.</p>
           <h5>主进程</h5>
           <pre><code data-path="main-process/menus/application-menu.js"></code></pre>
@@ -33,9 +32,9 @@
             <p>在为多个操作系统设计应用程序时, 请务必注意应用程序菜单在每个操作系统上的不同约定之处。</p>
             <p>例如, 在 Windows 上, 加速器设置为 <code>＆</code> . 命名约定也有所不同, 如 "设置" 或 "首选项". 下面是学习操作系统特定标准的资源:</p>
             <ul>
-              <li><a href="https://developer.apple.com/macos/human-interface-guidelines/user-interaction/keyboard">macOS<span class="u-visible-to-screen-reader">(opens in new window)</span></a></li>
-              <li><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb226797(v=vs.85).aspx">Windows<span class="u-visible-to-screen-reader">(opens in new window)</span></a></li>
-              <li><a href="https://developer.gnome.org/hig/stable/menu-bars.html.en">Linux<span class="u-visible-to-screen-reader">(opens in new window)</span></a></li>
+              <li><a href="https://developer.apple.com/macos/human-interface-guidelines/menus/menu-anatomy/">macOS<span class="u-visible-to-screen-reader">(在新窗口中打开)</span></a></li>
+              <li><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb226797(v=vs.85).aspx">Windows<span class="u-visible-to-screen-reader">(在新窗口中打开)</span></a></li>
+              <li><a href="https://developer.gnome.org/hig/stable/menu-bars.html.en">Linux<span class="u-visible-to-screen-reader">(在新窗口中打开)</span></a></li>
             </ul>
           </div>
         </div>
@@ -54,7 +53,7 @@
           <p>可以使用 <code>Menu</code> 和 <code>MenuItem</code> 模块创建上下文或右键单击菜单. 您可以右键单击此应用程序中的任何位置, 或单击示例按钮以查看示例上下文菜单.</p>
 
           <p>在这个示例中, 我们使用 <code>ipcRenderer</code> 模块来展示从渲染器进程显式调用它时的上下文菜单.</p>
-          <p>有关所有可用的属性请查看 <a href="https://github.com/electron/electron/blob/master/docs-translations/zh-CN/api/web-contents.md#event-context-menu">上下文菜单事件文档</a>.</p>
+          <p>有关所有可用的属性请查看 <a href="http://electron.atom.io/docs/api/web-contents/#event-context-menu">上下文菜单事件文档</a>.</p>
           <h5>主进程</h5>
           <pre><code data-path="main-process/menus/context-menu.js"></code></pre>
           <h5>渲染器进程</h5>

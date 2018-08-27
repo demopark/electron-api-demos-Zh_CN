@@ -9,7 +9,7 @@
         <h3>Electron 中的 <code>shell</code> 模块允许您访问某些本地元素, 如文件管理器和默认 Web 浏览器.</h3>
 
         <p>此模块在主进程和渲染器进程中都可以工作.</p>
-        <p>在浏览器中查看 <a href="https://github.com/electron/electron/blob/master/docs-translations/zh-CN/api/shell.md">完整 API 文档<span class="u-visible-to-screen-reader">(在新窗口中打开)</span></a>.</p>
+        <p>在浏览器中查看 <a href="http://electron.atom.io/docs/api/shell">完整 API 文档<span class="u-visible-to-screen-reader">(在新窗口中打开)</span></a>.</p>
       </div>
     </header>
 
@@ -20,10 +20,10 @@
         </button>
         <div class="demo-box">
           <div class="demo-controls">
-            <button class="demo-button" id="open-file-manager">查看示例</button>
+            <button class="demo-button" id="open-file-manager">在文件管理器中打开路径</button>
           </div>
-          <p>当前示例使用 <code>shell</code> 模块在特定位置打开系统文件管理器.</p>
-          <p>单击示例按钮将在根目录中打开文件管理器.</p>
+          <p>如果您不希望在当前应用程序中打开网站链接, 可以使用 <code>shell</code> 模块在外部打开. 当点击链接之后将在用户的默认浏览器中打开.</p>
+          <p>当点击示例按钮时, 将在您的浏览器中打开 Electron 的网站.<p>
           <h5>渲染器进程</h5>
           <pre><code data-path="renderer-process/native-ui/ex-links-file-manager/file-manager.js"></code></pre>
         </div>
