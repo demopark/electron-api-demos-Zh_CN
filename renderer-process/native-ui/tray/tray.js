@@ -17,7 +17,7 @@ trayBtn.addEventListener('click', function (event) {
 })
 // 从图标上下文菜单中删除托盘
 ipc.on('tray-removed', function () {
-  ipc.send('remove-tray')
-  trayOn = false
-  document.getElementById('tray-countdown').innerHTML = ''
+    trayOn = false
+    document.getElementById('tray-countdown').innerHTML = ''
+    ipc.send('remove-tray')
 })
