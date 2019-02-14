@@ -13,8 +13,7 @@ if (process.mas) app.setName('Electron APIs')
 let mainWindow = null
 
 function initialize () {
-  const shouldQuit = makeSingleInstance()
-  if (shouldQuit) return app.quit()
+  makeSingleInstance()
 
   loadDemos()
 
@@ -70,9 +69,11 @@ function initialize () {
 // Returns true if the current version of the app should quit instead of
 // launching.
 function makeSingleInstance () {
-  if (process.mas) return false
+  if (process.mas) return
 
-  return app.makeSingleInstance(() => {
+  app.requestSingleInstanceLock()
+
+  app.on('second-instance', () => {
     if (mainWindow) {
       if (mainWindow.isMinimized()) mainWindow.restore()
       mainWindow.focus()
