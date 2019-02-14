@@ -47,3 +47,6 @@ $ npm run dev
 ## 扩展
 
 通过 [阅读文档](docs.md) 来详细了解如何构建此应用或如何 [添加一个新演示](docs.md#添加一个章节或示例).
+
+# 赞赏支持
+![赞赏支持](https://github.com/demopark/electron-api-demos-Zh_CN/blob/master/assets/img/td.png)
