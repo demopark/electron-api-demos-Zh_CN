@@ -1,6 +1,6 @@
 # These are supported funding model platforms
 
-github: [demopark]
+github: demopark
 patreon: # Replace with a single Patreon username
 open_collective: # Replace with a single Open Collective username
 ko_fi: # Replace with a single Ko-fi username
@@ -10,5 +10,5 @@ liberapay: # Replace with a single Liberapay username
 issuehunt: # Replace with a single IssueHunt username
 otechie: # Replace with a single Otechie username
 custom: [
-    “https://raw.githubusercontent.com/demopark/electron-api-demos-Zh_CN/master/assets/img/td.png”
+    “https://raw.githubusercontent.com/demopark/electron-api-demos-Zh_CN/master/assets/img/td.png”,
 ]
