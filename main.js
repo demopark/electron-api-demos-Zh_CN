@@ -35,7 +35,7 @@ function initialize () {
     mainWindow = new BrowserWindow(windowOptions)
     mainWindow.loadURL(path.join('file://', __dirname, '/index.html'))
 
-    // Launch fullscreen with DevTools open, usage: npm run debug
+    // 在打开 DevTools 的情况下全屏启动, 用法: npm run debug
     if (debug) {
       mainWindow.webContents.openDevTools()
       mainWindow.maximize()
@@ -64,13 +64,13 @@ function initialize () {
   })
 }
 
-// Make this app a single instance app.
+// 将此应用程序设为单个实例应用程序。
 //
-// The main window will be restored and focused instead of a second window
-// opened when a person attempts to launch a second instance.
+// 当尝试启动第二个实例时，将恢复并聚焦到主窗口，
+// 而不是打开第二个窗口。
 //
-// Returns true if the current version of the app should quit instead of
-// launching.
+// 如果应用程序的当前版本应该退出而不是启动，
+// 则返回true.
 function makeSingleInstance () {
   if (process.mas) return
 
@@ -84,7 +84,7 @@ function makeSingleInstance () {
   })
 }
 
-// Require each JS file in the main-process dir
+// 在主进程目录中需要的每个 JS 文件
 function loadDemos () {
   const files = glob.sync(path.join(__dirname, 'main-process/**/*.js'))
   files.forEach((file) => { require(file) })
